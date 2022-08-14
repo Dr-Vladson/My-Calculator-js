@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5b477fea48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator dflex">
+            <div class="calculator__screen">
+                <div class="history-icon"><i class="history-icon__i history-icon__i_hover history-icon__i_c-grey fa-solid fa-clock-rotate-left"></i></div>
+                <div class="screen-popup-window">
+                    <div class="screen-popup-window__top">
+                        <div class="history-icon"><i class="history-icon__i history-icon__i_active history-icon__i_c-blue fa-solid fa-clock-rotate-left"></i></div>
+                    </div>
+                    <p class="start-text start-text_c-grey">Ваші результати і обчислення з'являтимуться тут для можливого повторного використання</p>
+                    <div class="screen-popup-window__math-history"></div>
+                </div>
+                <div class="dflex screen-text">
+                    <div class="screen-text__up"><p class="screen-text__up-p">Ans = 0</p></div>
+                    <div class="screen-text__down">
+                        <span class="screen-text__down-span">0</span>
+                        <span class="screen-text__down-ad-span"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="calculator__all-buttons dflex">
+                <div class="calculator__buttons-block dflex">
+                    <div class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p class="calculator__button-text">(</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p class="calculator__button-text">)</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p data-value="**" data-screen-view="^" class="calculator__button-text">x<sup>n</sup></p>
+                    </div>
+                    <div id="ac-btn" class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p class="calculator__button-text">AC</p>
+                    </div>
+                </div>
+                <div class="calculator__buttons-block dflex">
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">7</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">8</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">9</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p data-value="/" data-screen-view="÷"  class="calculator__button-text">÷</p>
+                    </div>
+                </div>
+                <div class="calculator__buttons-block dflex">
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">4</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">5</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">6</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p data-value="*" data-screen-view="×" class="calculator__button-text">×</p>
+                    </div>
+                </div>
+                <div class="calculator__buttons-block dflex">
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">1</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">2</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">3</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p data-value="-" class="calculator__button-text">-</p>
+                    </div>
+                </div>
+                <div class="calculator__buttons-block dflex">
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">0</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-grey">
+                        <p class="calculator__button-text">.</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-blue calculator__button_f-white">
+                        <p class="calculator__button-text">=</p>
+                    </div>
+                    <div class="calculator__button dflex calculator__button_c-dark-grey">
+                        <p data-value="+" data-screen-view="+" class="calculator__button-text">+</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
