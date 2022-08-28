@@ -1,0 +1,246 @@
+html,body{
+    height: 100%;
+}
+.container {
+    height: 100%;
+    width: 100%;
+}
+.calculator {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 500px;
+}
+.dflex {
+    display: flex;
+}
+.calculator__screen {
+    padding-left: 10px;
+    width: 450px;
+    height: 100px;
+    border: 1px solid #4285F4;
+    border-radius: 10px;
+}
+.history-icon {
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+}
+.history-icon__i_c-grey {
+    color: #8B8F93;
+}
+.history-icon__i {
+    font-size: 30px;
+}
+.history-icon__i_hover:hover{
+    color: black;
+} 
+.history-icon__i_active:active{
+    color: #8B8F93;
+}
+.history-icon__i_c-blue {
+    color: #1A73E8;
+}
+.start-text{
+    position: absolute;
+    left: 100px;
+    width: 400px;
+    top: 10px;
+    
+    font-size: 25px;
+    text-align: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.start-text_c-grey{
+    color: #8B8F93;
+}
+.screen-popup-window {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    z-index: 9999;
+    box-shadow: 0 0 10px 2px;
+    border-radius: 10px;
+    width: 600px;
+    background-color: #ffffff;
+}
+.screen-popup-window__top{
+    width: 100%;
+    height: 70px;
+    border-radius: 10px 10px 0 0;
+}
+.screen-popup-window__top_border-bottom{
+    border-bottom: 1px solid #8B8F93;
+}
+.screen-popup-window__math-history{
+    padding-top: 35px;
+    width: 565px;
+    margin-left: 35px;
+    min-height: 50px;
+    max-height: 350px;
+    border-radius: 10px;
+}
+.screen-popup-window__math-history_overflow-scroll{
+    overflow-y: scroll;
+}
+.popup-db{
+    display: block;
+}
+
+.screen-popup-window__one-history-block{
+    margin-bottom: 25px;
+}
+.screen-popup-window__one-history-block span:first-child, .screen-popup-window__one-history-block span:last-child{
+    display: inline-block;
+    font-size: 25px;
+    padding: 5px ;
+    border: 1px solid #DADCE0;
+    border-radius: 5px;
+    color: #4285F4;
+}
+.historyError span:last-child {
+    background-color:#F8F9FA;
+    color: #8B8F93;
+}
+.historyError span:last-child:hover{
+    background-color:#F8F9FA;
+}
+.screen-popup-window__one-history-block span{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.screen-popup-window__one-history-block span:first-child:hover, .screen-popup-window__one-history-block span:last-child:hover{
+    background-color: #F7F7F7;
+}
+.screen-popup-window__one-history-block span:first-child:active, .screen-popup-window__one-history-block span:last-child:active{
+    background-color: #E8F0FE;
+}
+.screen-popup-window__one-history-block span:nth-child(2){
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #8B8F93;
+}
+.screen-text {
+    height: 100px;
+    width: 440px;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+@keyframes down-text {
+    0%{
+        bottom: -40px;
+    }
+    100%{
+        bottom: 10px;
+    }
+}
+@keyframes ans-up-text {
+    0%{
+        font-size: 35px;
+        color: black;
+    }
+    100%{
+        font-size: 20px;
+        color: #8B8F93;
+    }
+}
+.screen-text__up {
+    max-width: 390px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.screen-text__down {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 46px;
+    width: max-content;
+}
+.screen-text__up-p {
+    width: max-content;
+    visibility: hidden;
+    height: 25px;
+    font-size: 20px;
+    margin: 0;
+    color: #8B8F93;
+}
+.screen-text__down span {
+    font-size: 40px;
+}
+.screen-text__down-ad-span{
+    color: #8B8F93;
+}
+.calculator__all-buttons {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 325px;
+}
+.calculator__buttons-block {
+    justify-content: space-between;
+    width: 100%;
+    height: 17%;;
+}
+.calculator__button {
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 23%;
+    border-radius: 5px;
+}
+.calculator__button_c-dark-grey{
+    background-color: #DADCE0;
+}
+.calculator__button_c-blue{
+    background-color: #4285F4;
+}
+.calculator__button_c-grey{
+    background-color: #F1F3F4;
+}
+.calculator__button_f-white{
+    color: #ffffff;
+}
+.calculator__button-text {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+    font-size: 30px;
+}
